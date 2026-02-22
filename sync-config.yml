@@ -1,0 +1,24 @@
+# sync-config.yml
+# Declares this template's parent in the hierarchy and the paths that
+# template-platform's sync workflow will propagate from the parent.
+#
+# Schema:
+#   parent:   GitHub repo slug of the parent template (Tier N-1)
+#   tier:     This template's tier in the hierarchy (0=base, 1=stack, 2=archetype)
+#   sync_paths: Files/globs that are owned by the parent and must stay in sync.
+#               Changes to these paths in the parent will trigger a PR here.
+
+parent: EdwardRosenberg/template-base
+tier: 1
+
+sync_paths:
+  - .github/workflows/ci.yml
+  - .github/workflows/pr-title-lint.yml
+  - .github/copilot-instructions.md
+  - .github/PULL_REQUEST_TEMPLATE.md
+  - .github/ISSUE_TEMPLATE/bug.yml
+  - .github/ISSUE_TEMPLATE/feature.yml
+  - .github/ISSUE_TEMPLATE/chore.yml
+  - .editorconfig
+  - .gitignore
+

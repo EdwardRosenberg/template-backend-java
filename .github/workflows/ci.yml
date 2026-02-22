@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    uses: EdwardRosenberg/template-base/.github/workflows/ci.yml@main
+    with:
+      backend-enabled: true
+      backend-tech-stack: "java"
+      java-version: "21"
+      backend-build-command: "mvn -B clean verify"
+      backend-test-command: "mvn -B test"
+
+      frontend-enabled: false
+
+      ci-success-enabled: true
+

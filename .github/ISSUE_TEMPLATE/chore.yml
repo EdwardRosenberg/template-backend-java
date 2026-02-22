@@ -1,0 +1,52 @@
+name: Chore / Tech Debt
+description: Track refactors, cleanup, maintenance tasks, and technical debt
+title: "[Chore]: "
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our technical foundation!
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise summary of what needs to be done.
+      placeholder: Brief summary of the chore or tech debt...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Debt Description
+      description: What is suboptimal today? What pain does it cause?
+      placeholder: |
+        - Impact on developer velocity
+        - Reliability concerns
+        - Maintenance burden
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed Approach
+      description: High-level idea of how this will be addressed.
+      placeholder: Describe the general approach...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Clear, testable conditions for "done".
+      placeholder: |
+        - [ ] mvn -B clean verify passes
+        - [ ] No new Checkstyle warnings
+        - [ ] Criterion 3
+    validations:
+      required: true
+

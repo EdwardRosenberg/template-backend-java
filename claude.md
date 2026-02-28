@@ -8,7 +8,7 @@ Provide a shared Maven parent POM with `pluginManagement` for compiler, Surefire
 
 ## Tech Stack
 
-- **Language**: Java 21
+- **Language**: Java 25
 - **Build tool**: Maven (via Maven Wrapper `./mvnw`)
 - **Linter**: Checkstyle (Google Style, pragmatic adjustments — see `checkstyle.xml`)
 - **Test framework**: JUnit 5 + AssertJ + Mockito (managed in `dependencyManagement`)
@@ -41,7 +41,7 @@ This is a parent POM (`<packaging>pom</packaging>`) — there is no compilable s
 
 ## Java Conventions
 
-- **Java version**: 21 — use modern language features (records, sealed classes, pattern matching)
+- **Java version**: 25 — use modern language features (records, sealed classes, pattern matching)
 - **Compiler flags**: `-Xlint:all -Werror` — all warnings are errors
 - **No star imports**: Checkstyle enforces `AvoidStarImport`
 - **No unused imports**: Checkstyle enforces `UnusedImports`
@@ -89,4 +89,3 @@ Always update the version in the same commit as your functional changes.
 - Titles must follow Conventional Commits: `<type>(<scope>): <description>`
 - Run `./mvnw validate` before submitting
 - If modifying `checkstyle.xml`, verify rules against the Spring Boot archetype: `cd ../template-backend-java-spring-boot && ./mvnw checkstyle:check`
-

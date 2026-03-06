@@ -26,7 +26,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- Dependency versions -->
-    <junit.version>5.11.4</junit.version>
+    <junit.version>6.0.3</junit.version>
     <assertj.version>3.27.2</assertj.version>
     <mockito.version>5.15.2</mockito.version>
 
